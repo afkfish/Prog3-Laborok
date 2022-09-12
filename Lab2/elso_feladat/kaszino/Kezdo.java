@@ -8,6 +8,11 @@ public class Kezdo extends Jatekos {
 	}
 
 	@Override
+	public void setAsztal(Asztal asztal) {
+		this.asztal = asztal;
+	}
+
+	@Override
 	public void lep() {
 		System.out.println(this);
 		System.out.println("Kor: " + asztal.getKor());

@@ -1,20 +1,15 @@
 package kaszino;
 
-public class Jatekos {
+public abstract class Jatekos {
 	protected Asztal asztal;
 
-	public void lep() {
-		System.out.println("Kor: " + asztal.getKor());
-		System.out.println("Tet: " + asztal.getTet());
-	}
+	public abstract void lep();
 
-	public void setAsztal(Asztal asztal) {
-		this.asztal = asztal;
-	}
+	public abstract void setAsztal(Asztal asztal);
 
 	@Override
 	protected void finalize() {
-		System.out.println(this.hashCode());
+		System.out.println("Osztaly azonosito: " + this.hashCode());
 		System.out.println(this);
 	}
 }

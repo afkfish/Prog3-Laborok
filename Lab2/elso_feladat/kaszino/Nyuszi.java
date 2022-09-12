@@ -8,6 +8,11 @@ public class Nyuszi extends Jatekos{
 	}
 
 	@Override
+	public void setAsztal(Asztal asztal) {
+		this.asztal = asztal;
+	}
+
+	@Override
 	public void lep() {
 		System.out.println("Szin: " + color);
 		System.out.println("Kor: " + asztal.getKor());

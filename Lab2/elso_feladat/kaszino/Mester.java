@@ -8,6 +8,11 @@ public class Mester extends Jatekos{
 	}
 
 	@Override
+	public void setAsztal(Asztal asztal) {
+		this.asztal = asztal;
+	}
+
+	@Override
 	public void lep() {
 		System.out.println("Fokozat: " + fok);
 		System.out.println("Kor: " + asztal.getKor());
