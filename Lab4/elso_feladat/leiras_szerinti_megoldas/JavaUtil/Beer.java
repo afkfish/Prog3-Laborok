@@ -1,6 +1,8 @@
 package JavaUtil;
 
-public class Beer implements Comparable<Beer> {
+import java.io.Serializable;
+
+public class Beer implements Comparable<Beer>, Serializable {
 	private final String name;
 	private final String style;
 	private final double strength;

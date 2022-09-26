@@ -1,4 +1,6 @@
 package JavaUtil;
 
-public record Beer(String name, String style, double strength) {
+import java.io.Serializable;
+
+public record Beer(String name, String style, double strength) implements Serializable {
 }
