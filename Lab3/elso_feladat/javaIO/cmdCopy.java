@@ -1,6 +1,8 @@
 package javaIO;
 
 import java.io.*;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.Scanner;
 
@@ -23,6 +25,8 @@ public class cmdCopy {
 			case "length" -> length(cmd);
 			case "head" -> head(cmd);
 			case "tail" -> tail(cmd);
+			case "wc" -> wc(cmd);
+			case "grep" -> grep(cmd);
 			default -> {}
 		}
 	}
@@ -234,6 +238,58 @@ public class cmdCopy {
 			System.out.println("Possible arguments:");
 			System.out.println("<file1> - get file1's last 10 lines");
 			System.out.println("-n <n> <file1> - get file1's last n lines");
+		}
+	}
+
+	protected void wc(String[] cmd) {
+		try {
+			File file = new File(cmd[1]);
+			Scanner scanner = new Scanner(file);
+			ArrayList<String> words = new ArrayList<>();
+			int line = 0;
+			int ch = 0;
+			while (scanner.hasNextLine()) {
+				line += 1;
+				words.addAll(Arrays.asList(scanner.nextLine().split(" ")));
+			}
+			for (String s: words) {
+				ch += s.length();
+			}
+			System.out.println("Line count: " + line);
+			System.out.println("Word count: " + words.size());
+			System.out.println("Char count: " + ch);
+			// System.out.println(words);
+		} catch (IndexOutOfBoundsException e) {
+			System.err.println("Missing or wrong argument!\n");
+			System.out.println("Possible arguments:");
+			System.out.println("<file> - get file's statistics");
+		} catch (FileNotFoundException e) {
+			System.err.println("File not found!");
+		}
+	}
+
+	protected void grep(String[] cmd) {
+		try {
+			String pattern = ".*" + cmd[1] + ".*";
+			File file = new File(cmd[2]);
+			Scanner scanner = new Scanner(file);
+			ArrayList<String> lines = new ArrayList<>();
+			while (scanner.hasNextLine()) {
+				String line;
+				if ((line=scanner.nextLine()).matches(pattern)) {
+					lines.add(line);
+				}
+			}
+			scanner.close();
+			for (String line : lines) {
+				System.out.println(line);
+			}
+		} catch (FileNotFoundException e) {
+			System.err.println("File not found!");
+		} catch (IndexOutOfBoundsException e) {
+			System.err.println("Missing or wrong argument!\n");
+			System.out.println("Possible arguments:");
+			System.out.println("<pattern> <file> - get file's lines that matches the pattern");
 		}
 	}
 }
