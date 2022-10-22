@@ -18,6 +18,8 @@ A 2022 őszi félév Programozás alapjai 3 tantárgyhoz való labor feladat meg
 	- [IMSC](https://github.com/afkfish/Prog3-Laborok/blob/main/Lab5/java_5_imsc.pdf)  
 - [Lab6 feladat](https://github.com/afkfish/Prog3-Laborok/blob/main/Lab6/java_b_lambda_tasks.pdf)
 	- [IMSC](https://github.com/afkfish/Prog3-Laborok/blob/main/Lab6/java_b_imsc_tasks.pdf)
+- [Lab7 feladat](https://github.com/afkfish/Prog3-Laborok/blob/main/Lab7/java_7_swing_manual_tasks_0.pdf)
+	- [IMSC](https://github.com/afkfish/Prog3-Laborok/blob/main/Lab7/java_7_imsc_low_level_graphics_tasks_0.pdf)
 
 ## Egyéb infó
 
