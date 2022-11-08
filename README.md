@@ -32,7 +32,7 @@ A 4. labor első fele két féle képp van megoldva:
 * [Labor leírás alapján](https://github.com/afkfish/Prog3-Laborok/tree/main/Lab4/JavaUtil/leiras_szerinti_megoldas)
 * [Saját implementáció ami rövidebb és talán egyszerübb](https://github.com/afkfish/Prog3-Laborok/tree/main/Lab4/JavaUtil/egyszerubb_megoldas)
 
-Az 1. laborhoz tartozó JAR file a [build](https://github.com/afkfish/Prog3-Laborok/tree/main/out/artifacts) mappában található.
+Az 1. laborhoz tartozó JAR file a [build](https://github.com/afkfish/Prog3-Laborok/tree/main/build) mappában található.
 
 # Fontos
 Aki tud és akar hozzájárulni az IMSC feladat megoldásokkal az tegye fel az IMSC contribution branchbe.
