@@ -3,65 +3,65 @@ package swingmvclab;
 import java.io.Serializable;
 
 /*
- * Egy hallgat� adatait t�rol� oszt�ly.
+ * Egy hallgató adatait tároló osztály.
  * 
- * NE M�DOS�TSD!
+ * NE MÓDOSÍTSD!
  */
 public class Student implements Serializable {
 
-    // Hallgat� neve
+    // Hallgató neve
     private String name;
 
-    // Hallgat� Neptun-k�dja.
+    // Hallgató Neptun-kódja.
     private String neptun;
 
-    // Van-e al��r�sa.
+    // Van-e aláírása.
     private boolean signature;
 
-    // A megszerzett oszt�lyzat.
+    // A megszerzett osztályzat.
     private int grade;
 
-    // Hallgat� nev�nek lek�rdez�se. 
+    // Hallgató nevének lekérdezése.
     public String getName() {
         return name;
     }
     
-    // Hallgat� nev�nek be�ll�t�sa.
+    // Hallgató nevének beállítása.
     public void setName(String name) {
         this.name = name;
     }
     
-    // Hallgat� Neptun-k�dj�nak lek�rdez�se.
+    // Hallgató Neptun-kódjának lekérdezése.
     public String getNeptun() {
         return neptun;
     }
     
-    // Hallgat� Neptun-k�dj�nak be�ll�t�sa.
+    // Hallgatá Neptun-kódjának beállítása.
     public void setNeptun(String neptun) {
         this.neptun = neptun;
     }
     
-    // Al��r�s megl�t�nek lek�rdez�se.
+    // Aláírás meglétének lekérdezése.
     public Boolean hasSignature() {
         return signature;
     }
     
-    // Al��r�s megl�t�nek be�ll�t�sa.
+    // Aláírás meglétének beállítása.
     public void setSignature(Boolean signature) {
         this.signature = signature;
     }
 
-    // Oszt�lyzat lek�rdez�se.
+    // Osztályzat lekérdezése.
     public Integer getGrade() {
         return grade;
     }
     
-    // Oszt�lyzat be�ll�t�sa.
+    // Osztályzat beállítása.
     public void setGrade(Integer grade) {
         this.grade = grade;
     }
 
-    // Hallgat� l�trehoz�sa
+    // Hallgató létrehozása
     public Student(String name, String neptun, Boolean signature, Integer grade) {
         this.name = name;
         this.neptun = neptun;

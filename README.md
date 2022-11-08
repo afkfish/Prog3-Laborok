@@ -22,13 +22,15 @@ A 2022 őszi félév Programozás alapjai 3 tantárgyhoz való labor feladat meg
 	- [IMSC](https://github.com/afkfish/Prog3-Laborok/blob/main/Lab7/java_7_imsc_low_level_graphics_tasks_0.pdf)
 - [Lab8 feladat](https://github.com/afkfish/Prog3-Laborok/blob/main/Lab8/java_8_swing_mvc_tasks.pdf)
 	- [IMSC](https://github.com/afkfish/Prog3-Laborok/blob/main/Lab8/java_8_imsc.pdf)
+- [Lab9 feladat](https://github.com/afkfish/Prog3-Laborok/blob/main/Lab9/java_9_junit_tasks.pdf)
+	- [IMSC](https://github.com/afkfish/Prog3-Laborok/blob/main/Lab9/java_9_imsc_0.pdf)
 
 
 ## Egyéb infó
 
 A 4. labor első fele két féle képp van megoldva:
-* [Labor leírás alapján](https://github.com/afkfish/Prog3-Laborok/tree/main/Lab4/elso_feladat/egyszerubb_megoldas/JavaUtil)
-* [Saját implementáció ami rövidebb és talán egyszerübb](https://github.com/afkfish/Prog3-Laborok/tree/main/Lab4/elso_feladat/leiras_szerinti_megoldas/JavaUtil)
+* [Labor leírás alapján](https://github.com/afkfish/Prog3-Laborok/tree/main/Lab4/JavaUtil/leiras_szerinti_megoldas)
+* [Saját implementáció ami rövidebb és talán egyszerübb](https://github.com/afkfish/Prog3-Laborok/tree/main/Lab4/JavaUtil/egyszerubb_megoldas)
 
 Az 1. laborhoz tartozó JAR file a [build](https://github.com/afkfish/Prog3-Laborok/tree/main/out/artifacts) mappában található.
 

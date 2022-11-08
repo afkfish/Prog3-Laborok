@@ -14,22 +14,22 @@ import javax.swing.table.TableCellRenderer;
 import javax.swing.table.TableRowSorter;
 
 /*
- * A megjelen�tend� ablakunk oszt�lya.
+ * A megjelenítendő ablakunk osztálya.
  */
 public class StudentFrame extends JFrame {
     
     /*
-     * Ebben az objektumban vannak a hallgat�i adatok.
-     * A program indul�s ut�n bet�lti az adatokat f�jlb�l, bez�r�skor pedig kimenti oda.
+     * Ebben az objektumban vannak a hallgatói adatok.
+     * A program indulás után betölti az adatokat fájlból, bezáráskor pedig kimenti oda.
      * 
-     * NE M�DOS�TSD!
+     * NE MÓDOSÍTSD!
      */
     private StudentData data;
     private JTextField nameField, neptunField;
     
     /*
-     * Itt hozzuk l�tre �s adjuk hozz� az ablakunkhoz a k�l�nb�z� komponenseket
-     * (t�bl�zat, beviteli mez�, gomb).
+     * Itt hozzuk létre és adjuk hozzá az ablakunkhoz a különböző komponenseket
+     * (táblázat, beviteli mező, gomb).
      */
     private void initComponents() {
         this.setLayout(new BorderLayout());
@@ -67,14 +67,14 @@ public class StudentFrame extends JFrame {
     /*
      * Az ablak konstruktora.
      * 
-     * NE M�DOS�TSD!
+     * NE MÓDOSÍTSD!
      */
     @SuppressWarnings("unchecked")
     public StudentFrame() {
         super("Hallgat�i nyilv�ntart�s");
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         
-        // Indul�skor bet�ltj�k az adatokat
+        // Induláskor betöltjük az adatokat
         try {
             data = new StudentData();
             ObjectInputStream ois = new ObjectInputStream(new FileInputStream("students.dat"));
@@ -84,7 +84,7 @@ public class StudentFrame extends JFrame {
             ex.printStackTrace();
         }
         
-        // Bez�r�skor mentj�k az adatokat
+        // Bezáráskor mentjük az adatokat
         addWindowListener(new WindowAdapter() {
             @Override
             public void windowClosing(WindowEvent e) {
@@ -98,18 +98,18 @@ public class StudentFrame extends JFrame {
             }
         });
 
-        // Fel�p�tj�k az ablakot
+        // Felépítjük az ablakot
         setMinimumSize(new Dimension(550, 200));
         initComponents();
     }
 
     /*
-     * A program bel�p�si pontja.
+     * A program belépési pontja.
      * 
-     * NE M�DOS�TSD!
+     * NE MÓDOSÍTSD!
      */
     public static void main(String[] args) {
-        // Megjelen�tj�k az ablakot
+        // Megjelenítjük az ablakot
         StudentFrame sf = new StudentFrame();
         sf.setVisible(true);
     }

@@ -5,13 +5,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 /*
- * A hallgat�k adatait t�rol� oszt�ly.
+ * A hallgatók adatait tároló osztály.
  */
 public class StudentData extends AbstractTableModel {
 
     /*
-     * Ez a tagv�ltoz� t�rolja a hallgat�i adatokat.
-     * NE M�DOS�TSD!
+     * Ez a tagváltozó tárolja a hallgatói adatokat.
+     * NE MÓDOSÍTSD!
      */
     List<Student> students = new ArrayList<Student>();
 
