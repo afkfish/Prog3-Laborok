@@ -1,0 +1,102 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+
+<xs:element name="osm" type="osm"/>
+
+<xs:complexType name="osm">
+    <xs:sequence>
+      <xs:element name="bounds" type="bounds"/>
+      <xs:element name="node" type="node" 
+           maxOccurs="unbounded" minOccurs="0" 
+      />
+      <xs:element name="way" type="way" 
+           maxOccurs="unbounded" minOccurs="0" 
+      />
+      <xs:element name="relation" type="relation" 
+           maxOccurs="unbounded" minOccurs="0" 
+      />
+    </xs:sequence>
+
+      <xs:attribute name="version" type="xs:string"/>
+      <xs:attribute name="generator" type="xs:string"/>
+      <xs:attribute name="copyright" type="xs:string"/>
+      <xs:attribute name="attribution" type="xs:string"/>
+      <xs:attribute name="license" type="xs:string"/>
+</xs:complexType>
+
+<xs:complexType name="node">
+
+    <xs:sequence>
+      <xs:element name="tag" type="tag" 
+		maxOccurs="unbounded" minOccurs="0"
+      />
+    </xs:sequence>
+      <xs:attributeGroup ref="elemattr"/>
+      <xs:attribute name="lat" type="xs:decimal"/>
+      <xs:attribute name="lon" type="xs:decimal"/>
+</xs:complexType>
+
+<xs:complexType name="way">
+
+    <xs:sequence>
+      <xs:element name="nd" type="nd" 
+		maxOccurs="unbounded" minOccurs="0"
+      />
+      <xs:element name="tag" type="tag" 
+		maxOccurs="unbounded" minOccurs="0"
+      />
+
+    </xs:sequence>
+      <xs:attributeGroup ref="elemattr"/>
+
+</xs:complexType>
+
+<xs:complexType name="relation">
+
+
+    <xs:sequence>
+      <xs:element name="member" type="member" 
+		maxOccurs="unbounded" minOccurs="0"
+      />
+      <xs:element name="tag" type="tag" 
+		maxOccurs="unbounded" minOccurs="0"
+      />
+      
+    </xs:sequence>
+       <xs:attributeGroup ref="elemattr"/>
+</xs:complexType>
+
+<xs:complexType name="bounds">
+    <xs:attribute name="minlat" type="xs:decimal"/>
+    <xs:attribute name="minlon" type="xs:decimal"/>
+    <xs:attribute name="maxlat" type="xs:decimal"/>
+    <xs:attribute name="maxlon" type="xs:decimal"/>
+</xs:complexType>
+
+<xs:complexType name="tag">
+    <xs:attribute name="k" type="xs:string"/>
+    <xs:attribute name="v" type="xs:string"/>
+</xs:complexType>
+
+<xs:complexType name="nd">
+    <xs:attribute name="ref" type="xs:string"/>
+</xs:complexType>
+
+<xs:complexType name="member">
+    <xs:attribute name="type" type="xs:string"/>
+    <xs:attribute name="ref" type="xs:string"/>
+    <xs:attribute name="role" type="xs:string"/>
+</xs:complexType>
+
+<xs:attributeGroup name="elemattr">
+      <xs:attribute name="id" type="xs:integer"/>
+      <xs:attribute name="visible" type="xs:string"/>
+      <xs:attribute name="version" type="xs:integer"/>
+      <xs:attribute name="changeset" type="xs:integer"/>
+      <xs:attribute name="timestamp" type="xs:dateTime"/>
+      <xs:attribute name="user" type="xs:string"/>
+      <xs:attribute name="uid" type="xs:string"/>
+</xs:attributeGroup>
+
+</xs:schema>
